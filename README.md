@@ -1,31 +1,28 @@
 # Telegram Gifts Analyzer
 
-Telegram Gifts Analyzer - CLI application for collecting and analyzing statistics on gift sales in Telegram via the tonnelmp API. The script receives data on gift sales, calculates the main indicators and saves the report in Excel.
+Telegram Gifts Analyzer - CLI-приложение для сбора и анализа статистики продаж подарков в Telegram через API tonnelmp. Скрипт получает данные о продажах подарков, рассчитывает ключевые показатели и сохраняет отчёт в формате Excel.
 
 ---
 
-## [IMPORTANT] Where to get Auth Data
+## [ВАЖНО] Где взять Auth Data
 
-API tonnelmp requires your authentication data from tonnel, so don’t skip this section.
+API tonnelmp требует ваши данные для аутентификации в tonnel, поэтому не пропускайте этот раздел.
 
-How to get your access key (Auth Data):
+Как получить ключ доступа (Auth Data):
 
-1. Go to market.tonnel.network and log in to your account
-2. Open your browser console (Ctrl + Shift + C on Windows)
-3. Navigate to the Application tab → Storage → Local Storage → select https://market.tonnel.network/
-4. Find the entry with the key web-initData
-5. Copy the entire value next to web-initData — this is your Auth Data
+1. Зайди на [market.tonnel.network](https://market.tonnel.network) и войди в свой аккаунт.
+2. Открой консоль браузера (Ctrl + Shift + C на Windows).
+3. Перейди во вкладку **Application** → **Storage** → **Local Storage** → выбери https://market.tonnel.network/.
+4. Найди запись с ключом web-initData.
+5. Скопируй полностью значение рядом с web-initData — это и есть твой Auth Data.
 
-## What to do with AuthData?
-In the main.py file, insert your authorization key:
+## Что делать с AuthData?
+В файле main.py вставьте свой ключ авторизации:
 ```
-myAuthData = "<your Auth Data here>"
+myAuthData = "<ваш Auth Data тут>"
 ```
 ---
-## What does the project do?
-- Retrieves gift sales history via the tonnelmp API
-- Calculates price statistics: sales count, median, average, maximum, minimum, and range
-- Saves raw data and summary statistics into an Excel file with multiple sheets
-
-
-
+## Что делает проект?
+- Получает историю продаж подарков через API tonnelmp
+- Считает статистику по цене: количество продаж, медиану, среднее, максимум, минимум и разброс
+- Экспорт данных и отчётов в Excel файл с несколькими листами
